@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM maven:3.10.1-openjdk-21 AS builder
+FROM maven:3.9.5-openjdk-21 AS builder
 
 
 
