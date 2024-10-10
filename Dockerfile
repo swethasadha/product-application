@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM maven:3.8.1-openjdk-17 AS builder
+FROM maven:3.10.1-openjdk-21 AS builder
 
 
 
@@ -21,8 +21,7 @@ RUN mvn clean install -DskipTests
 
 
 # Stage 2: Create the runtime image
-FROM openjdk:17
-
+FROM openjdk:21
 
 
 # Set the working directory inside the container
