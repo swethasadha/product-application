@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM maven:3.9.9-amazoncorretto-21 AS builder
+FROM maven:3.9.1-openjdk-17 AS builder
 
 
 
@@ -21,7 +21,8 @@ RUN mvn clean install -DskipTests
 
 
 # Stage 2: Create the runtime image
-FROM amazoncorretto-21
+FROM openjdk:17
+
 
 
 # Set the working directory inside the container
